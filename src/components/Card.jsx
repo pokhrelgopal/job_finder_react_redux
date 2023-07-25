@@ -9,9 +9,11 @@ const Card = ({ job }) => {
         <span>&#x2022;</span>
         <span className="capitalize">{job.employment_type}</span>
       </p>
-      <p className="font-bold text-xl">{job.job_position}</p>
+      <p className="font-semibold tracking-wide text-xl">{job.job_position}</p>
       <p className="text-sm text-[#778]">{job.company_name}</p>
-      <p className="mt-5 text-indigo font-bold">{job.country_name}</p>
+      <p className="mt-5 text-indigo font-semibold tracking-wide">
+        {job.country_name}
+      </p>
     </div>
   );
 };
