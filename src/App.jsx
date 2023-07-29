@@ -8,11 +8,12 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchLocation, setSearchLocation] = useState("");
   const [fullTime, setFullTime] = useState(false);
-  const jobs = useSelector((state) => state.jobs.jobs);
 
   useEffect(() => {
     dispatch(fetchJobs());
   }, [dispatch]);
+
+  const jobs = useSelector((state) => state.jobs.jobs);
 
   const filteredJobs = jobs.filter((job) =>
     job.job_position.toLowerCase().includes(searchTerm.toLowerCase())
